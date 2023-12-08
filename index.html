@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-step form</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <!-- <h2 id="heading">Sign Up Your User Account</h2>
+                <p>Fill all form field to go to next step</p> -->
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="Account"><strong>Initial Information</strong></li>
+                            <li id="Personal"><strong>Party Information</strong></li>
+                            <li id="Image"><strong>Logistics</strong></li>
+                            <li id="Finish"><strong>Additional Services</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Initial Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 4</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">First Name</label> <input type="text" name="fname"
+                                    placeholder="First Name" />
+                                <label class="fieldlabels">Last Name</label> <input type="text" name="ulname"
+                                    placeholder="Last Name" />
+                                <label class="fieldlabels">Email ID</label> <input type="email" name="email"
+                                    placeholder="Email ID" />
+                                <label class="fieldlabels">Mobile Number</label> <input type="tel" name="mnumber"
+                                    placeholder="Mobile Number" />
+                                <label class="fieldlabels">Address</label> <input type="text" name="add"
+                                    placeholder="Address" />
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> Booking Party Information:</h2>
+                                        <h6>(Enter as much as possible)</h6>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 2 - 4</h2>
+                                    </div>
+                                    <div>
+                                        <div class="form-check form-switch">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Use Information
+                                                On Account?</label>
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Firm Name</label> <input type="text"
+                                                    name="fname" placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Booking Contact Name</label> <input
+                                                    type="text" name="Bookconname" placeholder="Type Here" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Phone Number</label> <input type="tel"
+                                                    name="Pnumber" placeholder="Type Here" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Billing Address</label> <input type="text"
+                                                    name="badd" placeholder="Type Here" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Zip/Postal Code</label> <input type="tel"
+                                                    name="code" placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Country/City</label> <input type="text"
+                                                    name="coun" placeholder="Type Here" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Role</label> <input type="text" name="role"
+                                                    placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Name of Rpresented Client</label> <input
+                                                    type="text" name="code" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Lead Counsel(s) Information: *</label> <input
+                                                    type="text" name="counsel" placeholder="Name" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Email ID</label> <input type="email"
+                                                    name="email" placeholder="Email" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels"></label> <input type="text" name="counsel"
+                                                    placeholder="Add additional counsel" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels"></label> <input type="text" name="text"
+                                                    placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> Opposing Party Information:</h2>
+                                    </div>
+                                    <div class="col-5"></div>
+                                    <div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Firm Name</label> <input type="text"
+                                                    name="fname" placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Booking Contact Name</label> <input
+                                                    type="text" name="Bookconname" placeholder="Type Here" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Phone Number</label> <input type="tel"
+                                                    name="Pnumber" placeholder="Type Here" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Billing Address</label> <input type="text"
+                                                    name="badd" placeholder="Type Here" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Zip/Postal Code</label> <input type="tel"
+                                                    name="code" placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Country/City</label> <input type="text"
+                                                    name="coun" placeholder="Type Here" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Role</label> <input type="text" name="role"
+                                                    placeholder="Input" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Name of Rpresented Client</label> <input
+                                                    type="text" name="code" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels">Lead Counsel(s) Information</label> <input
+                                                    type="text" name="counsel" placeholder="Name" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels">Email ID</label> <input type="email"
+                                                    name="email" placeholder="Email" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="fieldlabels"></label> <input type="text" name="counsel"
+                                                    placeholder="Add additional counsel" />
+                                            </div>
+                                            <div class="col">
+                                                <label class="fieldlabels"></label> <input type="text" name="text"
+                                                    placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-block">
+                                            <button type="button" class="btn btn-primary dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Additional Parties</button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                            <input type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> Basic Logistics</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 3 - 4</h2>
+                                    </div>
+                                </div>
+                                <label class="fieldlabels">Upload Cover Page(Optional)</label> <input type="file"
+                                    name="pic" accept="image/*">
+                                <label class="fieldlabels">Choose File Here</label><input type="file" name="pic"
+                                    accept="image/*">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="fieldlabels">Style Of Cause</label> <input type="text" name="badd"
+                                            placeholder="Type Here" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels">Court File#</label> <input type="tel" name="code"
+                                            placeholder="Input" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels">Booking Dates</label> <input type="date" name="coun"
+                                            placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="fieldlabels">Start Time</label> <input type="time" name="badd"
+                                            placeholder="Type Here" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels">End Time</label> <input type="time" name="code"
+                                            placeholder="Input" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels">Time Zone</label> <input type="time" name="coun"
+                                            placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="fieldlabels">Arbitrator(s)</label> <input type="text" name="badd"
+                                            placeholder="Chair's Name" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels">Email ID</label> <input type="email" name="code"
+                                            placeholder="email" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="fieldlabels"></label> <input type="text" name="badd"
+                                            placeholder="add additional arbitrator" />
+                                    </div>
+                                    <div class="col">
+                                        <label class="fieldlabels"> </label> <input type="text" name="code"
+                                            placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> Virtual Logistics</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="fieldlabels">Do you require a VCM(virtual case manager)?</label>
+                                    </div>
+                                    <div class="col">
+                                        <div class="onoffswitch">
+                                            <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                                id="myonoffswitch" checked>
+                                            <label class="onoffswitch-label" for="myonoffswitch">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-7"><label class="fieldlabels">Is there a particular VCM you want to
+                                        work with?</label><input type="text" name="" placehholder /></div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels"></label>Select a virtual platfrom <input type="number"
+                                        name="badd" placeholder="Zoom" />
+                                </div>
+                                <div class="col">
+                                    <label class="fieldlabels"> </label>Number of virtual breakout rooms <input
+                                        type="number" name="code" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels">Do you require a VCM(virtual case manager)?</label>
+                                </div>
+                                <div class="col">
+                                    <div class="onoffswitch">
+                                        <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                            id="myonoffswitch" checked>
+                                        <label class="onoffswitch-label" for="myonoffswitch">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-7"><label class="fieldlabels">Do you have any special accomodations
+                                        for your booking that our I.T. teamcan look into prior to the start
+                                        date?</label><input type="text" name="" placehholder /></div>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Submit" />
+                            <input type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Court Reporting</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 4 - 4</h2>
+                                    </div> <br><br>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <label class="fieldlabels">Will this matter plan to have a Court
+                                                Reporter?</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="onoffswitch">
+                                                <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                                    id="myonoffswitch" checked>
+                                                <label class="onoffswitch-label" for="myonoffswitch">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div><br><br>
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Additional Features</h2>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="fieldlabels">Do you require interpretation?</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="onoffswitch">
+                                                <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                                    id="myonoffswitch" checked>
+                                                <label class="onoffswitch-label" for="myonoffswitch">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div><br><br><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="fieldlabels">Do you require CART services?</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="onoffswitch">
+                                                <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                                    id="myonoffswitch" checked>
+                                                <label class="onoffswitch-label" for="myonoffswitch">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="fieldlabels">Will you need a quote prior to confirmation?</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="onoffswitch">
+                                                <input type="button" name="onoffswitch" class="onoffswitch-checkbox"
+                                                    id="myonoffswitch" checked>
+                                                <label class="onoffswitch-label" for="myonoffswitch">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-7"><label class="fieldlabels">Please list any additional requests or considerations you might have at this time</label><input type="text" name="" placehholder="Input" /></div>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
